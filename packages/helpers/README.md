@@ -4,7 +4,7 @@ Javascript Helpers for working with the Ghost [Content API](https://docs.ghost.o
 
 ## Usage
 
-See https://docs.ghost.org/api/helpers/
+See https://docs.ghost.org/themes/helpers/
 
 ## Develop
 
