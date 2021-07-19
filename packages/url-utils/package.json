@@ -29,8 +29,8 @@
     "cheerio": "^0.22.0",
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
-    "remark": "^11.0.2",
-    "remark-footnotes": "^1.0.0",
+    "remark": "^13.0.0",
+    "remark-footnotes": "^3.0.0",
     "unist-util-visit": "^2.0.0"
   }
 }
