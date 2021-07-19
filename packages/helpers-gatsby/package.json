@@ -38,7 +38,7 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "@tryghost/helpers": "^1.1.49",
-    "gatsby-link": "^2.9.0",
+    "gatsby-link": "^3.0.0",
     "prop-types": "^15.6.2"
   },
   "peerDependencies": {
