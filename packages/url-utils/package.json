@@ -31,6 +31,6 @@
     "moment-timezone": "^0.5.31",
     "remark": "^11.0.2",
     "remark-footnotes": "^1.0.0",
-    "unist-util-visit": "^2.0.0"
+    "unist-util-visit": "^3.0.0"
   }
 }
