@@ -11,6 +11,14 @@ or
 
 ## Usage
 
+```js
+const {twitter: makeTwitter, facebook: makeFacebook} = require('@tryghost/social-urls');
+
+const socialUrls = [
+    makeTwitter('@ghost'), // https://twitter.com/ghost
+    makeFacebook('/ghost') // https://facebook.com/ghost
+];
+```
 
 ## Develop
 

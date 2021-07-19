@@ -19,6 +19,80 @@ const trim = (schema) => {
     return schema;
 };
 
+/**
+ * @typedef {{
+ *  url?: string;
+ *  title?: string;
+ *  logo?: ImageObject
+ * }} SiteData
+ *
+ *
+ * @typedef {{
+ *  url: string;
+ *  dimensions?: {
+ *    width?: number;
+ *    height?: number;
+ *  }
+ * }} DimensionalImage
+ *
+ * @typedef {DimensionalImage | string} ImageObject
+ *
+ *
+ * @typedef {{
+ *   site: SiteData;
+ *   meta: {
+ *     name: string;
+ *     url: string;
+ *     description?: string;
+ *     sameAs?: string[];
+ *     image?: ImageObject;
+ *   }
+ * }} AuthorSchemaProperties
+ *
+ *
+ * @typedef {{
+ *   name: string;
+ *   site: SiteData;
+ *   meta: {
+ *     url: string;
+ *     description?: string;
+ *     image?: ImageObject;
+ *   }
+ * }} HomeSchemaProperties
+ *
+ *
+ * @typedef {{
+ *   site: SiteData;
+ *   author?: {
+ *     name: string;
+ *     url: string;
+ *     sameAs?: string[];
+ *     image?: ImageData;
+ *     description?: string;
+ *   }
+ *   meta: {
+ *     title: string;
+ *     url: string;
+ *     datePublished?: Date | string;
+ *     dateModified?: Date | string;
+ *     image?: ImageData;
+ *     keywords?: string[];
+ *     description?: string;
+ *   }
+ * }} PostSchemaProperties
+ *
+ *
+ * @typedef {{
+ *   site: SiteData;
+ *   meta: {
+ *     name: string;
+ *     url: string;
+ *     image?: ImageObject;
+ *     description?: string;
+ *   }
+ * }} TagSchemaProperties
+ */
+
 class SchemaGenerator {
     constructor(options) {
         this.options = options || {};
@@ -68,6 +142,10 @@ class SchemaGenerator {
         return trim(json);
     }
 
+    /**
+     * @param {'home' | 'author' | 'post' | 'tag'} type
+     * @param {HomeSchemaProperties | AuthorSchemaProperties | PostSchemaProperties | TagSchemaProperties} data
+     */
     createSchema(type, data) {
         if (!_.has(this.templates, type)) {
             type = 'home';
